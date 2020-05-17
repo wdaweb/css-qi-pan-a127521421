@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .big-box {
+            width: 800px;
+            height: 900px;
+            background: peru;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .big-box2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box1 {
+            width: 700px;
+            height: 360px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .box2 {
+            width: 700px;
+            height: 360px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .box1::before {
+            content: '';
+            width: 250px;
+            height: 200px;
+            border-top: 1px solid black;
+            transform: rotate(-45deg);
+            position: absolute;
+            display: block;
+            top: 17%;
+            left: 42.5%;
+        }
+
+        .box1::after {
+            content: '';
+            width: 250px;
+            height: 200px;
+            border-top: 1px solid black;
+            transform: rotate(45deg);
+            position: absolute;
+            display: block;
+            top: 17%;
+            left: 22%;
+        }
+
+        .box2::before {
+            content: '';
+            width: 250px;
+            height: 200px;
+            border-top: 1px solid black;
+            transform: rotate(-45deg);
+            position: absolute;
+            display: block;
+            top: 66.5%;
+            left: 42.3%;
+        }
+
+        .box2::after {
+            content: '';
+            width: 250px;
+            height: 200px;
+            border-top: 1px solid black;
+            transform: rotate(45deg);
+            position: absolute;
+            display: block;
+            top: 66.5%;
+            left: 22%;
+        }
+
+        .little-box {
+            width: 87.5px;
+            height: 90px;
+            border: 1px solid black;
+        }
+
+        .chinese {
+            width: 700px;
+            height: 100px;
+            border: 1px solid black;
+            font-size: 50px;
+            line-height: 100px;
+        }
+
+        .piece-box {
+            width: 750px;
+            height: 60px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 13px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+        }
+
+        .piece {
+            width: 60px;
+            height: 60px;
+            color: black;
+            background: white;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .piece-box2 {
+            width: 590px;
+            height: 60px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 21%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+        }
+
+        .piece-box3 {
+            width: 750px;
+            height: 60px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 31%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+        }
+
+        .piece-box4 {
+            width: 750px;
+            height: 60px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 62%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+        }
+
+        .piece2 {
+            width: 60px;
+            height: 60px;
+            color: red;
+            background: white;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .piece-box5 {
+            width: 590px;
+            height: 60px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 72%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+        }
+
+        .piece-box6 {
+            width: 750px;
+            height: 60px;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 92%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big-box">
+        <div class="piece-box">
+            <div class="piece">車</div>
+            <div class="piece">馬</div>
+            <div class="piece">象</div>
+            <div class="piece">士</div>
+            <div class="piece">將</div>
+            <div class="piece">士</div>
+            <div class="piece">象</div>
+            <div class="piece">馬</div>
+            <div class="piece">車</div>
+        </div>
+        <div class="piece-box2">
+            <div class="piece">包</div>
+            <div class="piece">包</div>
+        </div>
+        <div class="piece-box3">
+            <div class="piece">卒</div>
+            <div class="piece">卒</div>
+            <div class="piece">卒</div>
+            <div class="piece">卒</div>
+            <div class="piece">卒</div>
+        </div>
+        <div class="piece-box4">
+            <div class="piece2">兵</div>
+            <div class="piece2">兵</div>
+            <div class="piece2">兵</div>
+            <div class="piece2">兵</div>
+            <div class="piece2">兵</div>
+        </div>
+        <div class="piece-box5">
+            <div class="piece2">炮</div>
+            <div class="piece2">炮</div>
+        </div>
+        <div class="piece-box6">
+            <div class="piece2">俥</div>
+            <div class="piece2">傌</div>
+            <div class="piece2">像</div>
+            <div class="piece2">仕</div>
+            <div class="piece2">帥</div>
+            <div class="piece2">仕</div>
+            <div class="piece2">像</div>
+            <div class="piece2">傌</div>
+            <div class="piece2">俥</div>
+        </div>
+        <div class="big-box2">
+            <div class="box1">
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+            </div>
+            <div class="chinese">
+                楚河&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;漢界
+            </div>
+            <div class="box2">
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+                <div class="little-box"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
